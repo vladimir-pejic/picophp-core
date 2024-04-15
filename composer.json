@@ -1,0 +1,23 @@
+{
+    "name": "vladimir-pejic/picophp-core",
+    "description": "PicoPHP Framework Core",
+    "type": "library",
+    "require": {
+        "php": "^8.2",
+        "illuminate/database": "^11.3",
+        "symfony/http-foundation": "^7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PicoPHP\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vladimir Pejic",
+            "email": "vladimir.pejic@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
