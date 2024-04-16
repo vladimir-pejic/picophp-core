@@ -68,7 +68,7 @@ class Router {
 
         foreach ($this->routes[$method] ?? [] as $routePath => $routeConfig) {
             if ($this->pathMatches($routePath, $path, $params)) {
-                $request->attributes->add($params); // Add parameters to the request attributes
+                $request->attributes->add($params);
                 return $this->handleMiddlewares($request, $routeConfig['action'], $routeConfig['middleware'], $params);
             }
         }
