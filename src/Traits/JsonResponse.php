@@ -1,6 +1,6 @@
 <?php
 
-namespace PicoPHP\Base\Traits;
+namespace PicoPHP\Traits;
 
 trait JsonResponse
 {

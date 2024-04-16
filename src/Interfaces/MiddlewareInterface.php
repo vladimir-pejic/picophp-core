@@ -1,6 +1,6 @@
 <?php
 
-namespace PicoPHP\Base;
+namespace PicoPHP\Interfaces;
 
 use Symfony\Component\HttpFoundation\Request;
 

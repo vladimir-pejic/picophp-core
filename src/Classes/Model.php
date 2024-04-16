@@ -1,6 +1,6 @@
 <?php
 
-namespace PicoPHP\Base;
+namespace PicoPHP\Classes;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 

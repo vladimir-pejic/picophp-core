@@ -1,8 +1,8 @@
 <?php
 
-namespace PicoPHP\Base;
+namespace PicoPHP\Classes;
 
-use PicoPHP\Base\Traits\JsonResponse;
+use PicoPHP\Traits\JsonResponse;
 
 abstract class Controller {
 
