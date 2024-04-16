@@ -2,10 +2,13 @@
 
 namespace PicoPHP\Base;
 
+use PicoPHP\Base\Traits\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 abstract class Controller {
-    protected function response($content, $status = 200, $headers = []) {
-        return new Response($content, $status, $headers);
+
+    use JsonResponse;
+    protected function response($content, $status = 200) {
+        return $this->jsonResponse($content, $status);
     }
 }
