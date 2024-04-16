@@ -92,16 +92,17 @@ class Router {
 
     private function executeAction($action, Request $request, $params) {
         if (is_callable($action)) {
-            return call_user_func($action, $request);
+            return call_user_func_array($action, array_merge([$request], array_values($params)));
         }
 
         if (is_array($action) && class_exists($action[0]) && method_exists($action[0], $action[1])) {
             $controllerInstance = new $action[0]();
-            return $controllerInstance->{$action[1]}($request);
+            return call_user_func_array([$controllerInstance, $action[1]], array_merge([$request], array_values($params)));
         }
 
         $this->jsonResponse(['error' => 'Action not executable'], Response::HTTP_INTERNAL_SERVER_ERROR);
     }
+
 
     private function pathMatches($routePath, $path, &$params) {
         $regex = $this->convertToRegex($routePath);
