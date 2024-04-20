@@ -1,5 +1,5 @@
 {
-    "name": "vladimir-pejic/picophp-core",
+    "name": "picophp/core",
     "description": "PicoPHP Framework Core",
     "type": "library",
     "require": {
